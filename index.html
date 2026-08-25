@@ -8,8 +8,6 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="stylesheet" href="_ds/nocturne-572702aa-90c3-4d65-b98a-416a8e691f45/styles.css">
-<script src="_ds/nocturne-572702aa-90c3-4d65-b98a-416a8e691f45/_ds_bundle.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&amp;family=Rajdhani:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -221,141 +219,6 @@ a:hover{color:var(--gold-hi);}
 
           </div>
         </div>
-      </div>
-    </section>
-  </sc-if>
-
-  <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ false }}">
-    <section data-screen-label="Introduction" style="position:relative;height:100vh;padding-top:58px;background:#030304;overflow:hidden;">
-      <div style="position:absolute;inset:0;background:radial-gradient(98% 76% at 50% 16%,rgba(26,23,17,.92) 0%,#030304 64%);"></div>
-      <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,.012) 0px,rgba(255,255,255,.012) 1px,transparent 1px,transparent 4px);"></div>
-
-      <div style="position:relative;height:100%;display:flex;align-items:stretch;justify-content:center;">
-        <div style="position:relative;width:min(1260px,96%);height:calc(100% - 34px);margin-bottom:34px;padding-bottom:18px;display:flex;align-items:stretch;">
-
-          <div style="position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
-            <div style="position:absolute;inset:0;pointer-events:none;opacity:{{ khaosLight }};transition:opacity .5s ease;">
-              <div style="position:absolute;inset:0;clip-path:polygon(40% 0%,56% 0%,90% 100%,6% 100%);background:linear-gradient(178deg,rgba(255,242,210,.085) 0%,rgba(255,236,192,.026) 46%,transparent 86%);filter:blur(28px);"></div>
-            </div>
-            <div style="position:absolute;left:50%;bottom:52px;width:76%;height:30px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(255,238,200,.15),transparent 74%);filter:blur(13px);pointer-events:none;opacity:{{ khaosLight }};transition:opacity .5s ease;"></div>
-            <div style="position:absolute;left:50%;bottom:57px;width:40%;height:18px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.98),rgba(0,0,0,.45) 58%,transparent 78%);filter:blur(6px);pointer-events:none;"></div>
-
-            <sc-if value="{{ khaosOn }}" hint-placeholder-val="{{ false }}">
-              <div style="position:relative;width:min(400px,88%);margin-bottom:20px;flex:0 0 auto;animation:kgBubbleIn .55s cubic-bezier(.2,.8,.2,1) both;">
-                <div style="position:absolute;left:50%;bottom:-11px;width:20px;height:20px;margin-left:-10px;transform:rotate(45deg);border-right:1px solid rgba(217,178,74,.42);border-bottom:1px solid rgba(217,178,74,.42);background:linear-gradient(135deg,rgba(23,20,15,.98),rgba(9,9,10,.98));"></div>
-                <div style="position:relative;border:1px solid rgba(217,178,74,.42);border-radius:4px;background:linear-gradient(158deg,rgba(24,21,15,.97),rgba(8,8,10,.98));box-shadow:0 0 0 1px rgba(0,0,0,.9),0 26px 60px -24px rgba(0,0,0,.98),inset 0 1px 0 rgba(255,230,170,.12),0 0 44px -12px rgba(217,178,74,.22);overflow:hidden;">
-                  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,231,180,.5),transparent);"></div>
-                  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
-                    <div style="position:absolute;top:0;bottom:0;width:22%;background:linear-gradient(90deg,rgba(255,240,205,0),rgba(255,240,205,.09),rgba(255,240,205,0));animation:kgSweep 1.5s ease-out .25s both;"></div>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border-bottom:1px solid rgba(217,178,74,.18);background:linear-gradient(90deg,rgba(217,178,74,.13),rgba(217,178,74,0));">
-                    <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:11px;letter-spacing:.28em;color:var(--gold-hi);">KHAOS</div>
-                    <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;">TRANSMISSION 01</div>
-                  </div>
-                  <p style="margin:0;padding:17px 19px 19px;font-size:15px;line-height:1.62;color:#ddd5c6;text-wrap:pretty;">Nice to meet you: Im Khaos. The Divine General and Supreme commander of KG, the family welcomes you with open arms, how about you meet other figures of the group.</p>
-                </div>
-              </div>
-            </sc-if>
-
-            <div onClick="{{ khaosPick }}" role="button" tabindex="0" style="position:relative;height:min(40vh,330px);aspect-ratio:352/303;cursor:pointer;flex:0 0 auto;opacity:{{ khaosOp }};filter:{{ khaosFx }};transition:opacity .45s ease,filter .45s ease;">
-              <div style="position:relative;width:100%;height:100%;animation:kgFloat 7.4s ease-in-out 0s infinite;">
-                <img src="assets/khaos.png" alt="KHAOS" style="width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 24px 28px rgba(0,0,0,.95));" />
-                <img src="assets/khaos.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:brightness(2.6) contrast(.9) blur(1px);opacity:.14;mix-blend-mode:screen;" />
-              </div>
-            </div>
-
-            <div style="position:relative;margin-top:14px;text-align:center;padding:0 8px;">
-              <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:16px;letter-spacing:.22em;color:{{ khaosNameC }};text-shadow:0 2px 0 rgba(0,0,0,.9);transition:color .4s ease;">KHAOS</div>
-              <div style="margin-top:5px;font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.26em;color:{{ khaosRoleC }};transition:color .4s ease;">DIVINE GENERAL // SUPREME COMMANDER</div>
-            </div>
-          </div>
-
-          <div style="position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
-            <div style="position:absolute;inset:0;pointer-events:none;opacity:{{ anteLight }};transition:opacity .5s ease;">
-              <div style="position:absolute;inset:0;clip-path:polygon(40% 0%,56% 0%,90% 100%,6% 100%);background:linear-gradient(178deg,rgba(255,242,210,.085) 0%,rgba(255,236,192,.026) 46%,transparent 86%);filter:blur(28px);"></div>
-            </div>
-            <div style="position:absolute;left:50%;bottom:52px;width:76%;height:30px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(255,238,200,.15),transparent 74%);filter:blur(13px);pointer-events:none;opacity:{{ anteLight }};transition:opacity .5s ease;"></div>
-            <div style="position:absolute;left:50%;bottom:57px;width:40%;height:18px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.98),rgba(0,0,0,.45) 58%,transparent 78%);filter:blur(6px);pointer-events:none;"></div>
-
-            <sc-if value="{{ anteOn }}" hint-placeholder-val="{{ false }}">
-              <div style="position:relative;width:min(400px,88%);margin-bottom:20px;flex:0 0 auto;animation:kgBubbleIn .55s cubic-bezier(.2,.8,.2,1) both;">
-                <div style="position:absolute;left:50%;bottom:-11px;width:20px;height:20px;margin-left:-10px;transform:rotate(45deg);border-right:1px solid rgba(217,178,74,.42);border-bottom:1px solid rgba(217,178,74,.42);background:linear-gradient(135deg,rgba(23,20,15,.98),rgba(9,9,10,.98));"></div>
-                <div style="position:relative;border:1px solid rgba(217,178,74,.42);border-radius:4px;background:linear-gradient(158deg,rgba(24,21,15,.97),rgba(8,8,10,.98));box-shadow:0 0 0 1px rgba(0,0,0,.9),0 26px 60px -24px rgba(0,0,0,.98),inset 0 1px 0 rgba(255,230,170,.12),0 0 44px -12px rgba(217,178,74,.22);overflow:hidden;">
-                  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,231,180,.5),transparent);"></div>
-                  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
-                    <div style="position:absolute;top:0;bottom:0;width:22%;background:linear-gradient(90deg,rgba(255,240,205,0),rgba(255,240,205,.09),rgba(255,240,205,0));animation:kgSweep 1.5s ease-out .25s both;"></div>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border-bottom:1px solid rgba(217,178,74,.18);background:linear-gradient(90deg,rgba(217,178,74,.13),rgba(217,178,74,0));">
-                    <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:11px;letter-spacing:.28em;color:var(--gold-hi);">ANTE</div>
-                    <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;">TRANSMISSION 02</div>
-                  </div>
-                  <p style="margin:0;padding:17px 19px 19px;font-size:15px;line-height:1.62;color:#ddd5c6;text-wrap:pretty;">Hey, Im the President of KGCORP also known as the KG Guerrilla Corp the unit of kg that handles clark county, miami and shinjuku, lets get along.</p>
-                </div>
-              </div>
-            </sc-if>
-
-            <div onClick="{{ antePick }}" role="button" tabindex="0" style="position:relative;height:min(40vh,330px);aspect-ratio:220/297;cursor:pointer;flex:0 0 auto;opacity:{{ anteOp }};filter:{{ anteFx }};transition:opacity .45s ease,filter .45s ease;">
-              <div style="position:relative;width:100%;height:100%;animation:kgFloat 7.4s ease-in-out 1.3s infinite;">
-                <img src="assets/ante.png?v=2" alt="ANTE" style="width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 24px 28px rgba(0,0,0,.95));" />
-                <img src="assets/ante.png?v=2" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:brightness(2.6) contrast(.9) blur(1px);opacity:.14;mix-blend-mode:screen;" />
-              </div>
-            </div>
-
-            <div style="position:relative;margin-top:14px;text-align:center;padding:0 8px;">
-              <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:16px;letter-spacing:.22em;color:{{ anteNameC }};text-shadow:0 2px 0 rgba(0,0,0,.9);transition:color .4s ease;">ANTE</div>
-              <div style="margin-top:5px;font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.26em;color:{{ anteRoleC }};transition:color .4s ease;">PRESIDENT // KGCORP</div>
-            </div>
-          </div>
-
-          <div style="position:relative;flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;">
-            <div style="position:absolute;inset:0;pointer-events:none;opacity:{{ aycheLight }};transition:opacity .5s ease;">
-              <div style="position:absolute;inset:0;clip-path:polygon(40% 0%,56% 0%,90% 100%,6% 100%);background:linear-gradient(178deg,rgba(255,242,210,.085) 0%,rgba(255,236,192,.026) 46%,transparent 86%);filter:blur(28px);"></div>
-            </div>
-            <div style="position:absolute;left:50%;bottom:52px;width:76%;height:30px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(255,238,200,.15),transparent 74%);filter:blur(13px);pointer-events:none;opacity:{{ aycheLight }};transition:opacity .5s ease;"></div>
-            <div style="position:absolute;left:50%;bottom:57px;width:40%;height:18px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.98),rgba(0,0,0,.45) 58%,transparent 78%);filter:blur(6px);pointer-events:none;"></div>
-
-            <sc-if value="{{ aycheOn }}" hint-placeholder-val="{{ false }}">
-              <div style="position:relative;width:min(400px,88%);margin-bottom:20px;flex:0 0 auto;animation:kgBubbleIn .55s cubic-bezier(.2,.8,.2,1) both;">
-                <div style="position:absolute;left:50%;bottom:-11px;width:20px;height:20px;margin-left:-10px;transform:rotate(45deg);border-right:1px solid rgba(217,178,74,.42);border-bottom:1px solid rgba(217,178,74,.42);background:linear-gradient(135deg,rgba(23,20,15,.98),rgba(9,9,10,.98));"></div>
-                <div style="position:relative;border:1px solid rgba(217,178,74,.42);border-radius:4px;background:linear-gradient(158deg,rgba(24,21,15,.97),rgba(8,8,10,.98));box-shadow:0 0 0 1px rgba(0,0,0,.9),0 26px 60px -24px rgba(0,0,0,.98),inset 0 1px 0 rgba(255,230,170,.12),0 0 44px -12px rgba(217,178,74,.22);overflow:hidden;">
-                  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,231,180,.5),transparent);"></div>
-                  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
-                    <div style="position:absolute;top:0;bottom:0;width:22%;background:linear-gradient(90deg,rgba(255,240,205,0),rgba(255,240,205,.09),rgba(255,240,205,0));animation:kgSweep 1.5s ease-out .25s both;"></div>
-                  </div>
-                  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 13px;border-bottom:1px solid rgba(217,178,74,.18);background:linear-gradient(90deg,rgba(217,178,74,.13),rgba(217,178,74,0));">
-                    <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:11px;letter-spacing:.28em;color:var(--gold-hi);">AYCHE</div>
-                    <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;">TRANSMISSION 03</div>
-                  </div>
-                  <p style="margin:0;padding:17px 19px 19px;font-size:15px;line-height:1.62;color:#ddd5c6;text-wrap:pretty;">Im the vice president of KGcorp, if you read ante's introduction you'd know exactly what it is. Hope you do well here, we have big hopes.</p>
-                </div>
-              </div>
-            </sc-if>
-
-            <div onClick="{{ aychePick }}" role="button" tabindex="0" style="position:relative;height:min(40vh,330px);aspect-ratio:419/290;cursor:pointer;flex:0 0 auto;opacity:{{ aycheOp }};filter:{{ aycheFx }};transition:opacity .45s ease,filter .45s ease;">
-              <div style="position:relative;width:100%;height:100%;animation:kgFloat 7.4s ease-in-out 2.6s infinite;">
-                <img src="assets/ayche.png?v=2" alt="AYCHE" style="width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 24px 28px rgba(0,0,0,.95));" />
-                <img src="assets/ayche.png?v=2" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:brightness(2.6) contrast(.9) blur(1px);opacity:.14;mix-blend-mode:screen;" />
-              </div>
-            </div>
-
-            <div style="position:relative;margin-top:14px;text-align:center;padding:0 8px;">
-              <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:16px;letter-spacing:.22em;color:{{ aycheNameC }};text-shadow:0 2px 0 rgba(0,0,0,.9);transition:color .4s ease;">AYCHE</div>
-              <div style="margin-top:5px;font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.26em;color:{{ aycheRoleC }};transition:color .4s ease;">VICE PRESIDENT // KGCORP</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <sc-if value="{{ noneActive }}" hint-placeholder-val="{{ true }}">
-        <div style="position:absolute;left:0;right:0;top:84px;display:flex;align-items:center;justify-content:center;gap:9px;font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:.34em;color:var(--gold);animation:kgPulse 2.4s ease-in-out infinite;pointer-events:none;">
-          <div style="width:6px;height:6px;border:1px solid var(--gold);"></div>TAP A FIGURE TO SPEAK
-        </div>
-      </sc-if>
-
-      <div style="position:absolute;left:0;right:0;bottom:0;height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;background:#070708;border-top:1px solid var(--line);font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:.24em;color:#5d564d;">
-        <div>KG SYNDICATE // INTRODUCTION</div>
-        <div>03 FIGURES ON RECORD &nbsp;·&nbsp; FURTHER FIGURES AWAITING INTRODUCTION</div>
       </div>
     </section>
   </sc-if>
@@ -654,7 +517,7 @@ a:hover{color:var(--gold-hi);}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;goldAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#d9b24a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#d9b24a&quot;,&quot;#c9a227&quot;,&quot;#e8c766&quot;,&quot;#b8860b&quot;]},&quot;introEnabled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;declassify&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Ranks&quot;}}">
-const PAGES = ["HUB","COMMAND","RANKS","INTRODUCTION","MEDALS","DATABASE","MAIN GROUP"];
+const PAGES = ["HUB","COMMAND","RANKS","MEDALS","DATABASE","MAIN GROUP"];
 
 const C_LOW = "#8a7bf0", C_MID = "#c0392b", C_HIGH = "#d16be0", C_CMD = "#5865f2", C_TOP = "#ed4245";
 
@@ -684,28 +547,6 @@ const RANKS = [
 ];
 
 const SN = RANKS.length - 1;
-
-const FIGURES = [
-  { k: "khaos", n: "KHAOS", base: 1.62 },
-  { k: "ante",  n: "ANTE",  base: 1.35 },
-  { k: "ayche", n: "AYCHE", base: 1.22 }
-];
-
-function FIGURE_VALS(active, mk) {
-  const v = {};
-  FIGURES.forEach(f => {
-    const st = !active ? "idle" : active === f.n ? "on" : "off";
-    const b = st === "on" ? f.base * 1.16 : st === "off" ? f.base * 0.72 : f.base;
-    v[f.k + "On"] = st === "on";
-    v[f.k + "Pick"] = mk(f.n);
-    v[f.k + "Op"] = st === "off" ? 0.5 : 1;
-    v[f.k + "Fx"] = "brightness(" + b.toFixed(2) + ") contrast(" + (st === "on" ? "1.09" : "1.05") + ") saturate(" + (st === "off" ? ".5" : "1.06") + ")";
-    v[f.k + "Light"] = st === "on" ? 1 : st === "off" ? 0.2 : 0.62;
-    v[f.k + "NameC"] = st === "on" ? "var(--gold)" : st === "off" ? "#4e4941" : "#7a7367";
-    v[f.k + "RoleC"] = st === "on" ? "#a89c86" : st === "off" ? "#3b3833" : "#514c44";
-  });
-  return v;
-}
 
 const SHARDS = (() => {
   let seed = 20260825;
@@ -863,11 +704,8 @@ class Component extends DCLogic {
       isHub: page === "HUB",
       isCommand: page === "COMMAND",
       isRanks: page === "RANKS",
-      isIntro: page === "INTRODUCTION",
-      noneActive: !this.state.active,
-      ...FIGURE_VALS(this.state.active || null, (n) => () => this.setState(s => ({ active: s.active === n ? null : n }))),
       isMedals: page === "MEDALS",
-      isStub: page !== "HUB" && page !== "COMMAND" && page !== "RANKS" && page !== "INTRODUCTION" && page !== "MEDALS",
+      isStub: page !== "HUB" && page !== "COMMAND" && page !== "RANKS" && page !== "MEDALS",
       stubLabel: page,
       replay: () => this.playIntro(),
       skipIntro: () => { clearTimeout(this.t); this.setState({ intro: false }); },
