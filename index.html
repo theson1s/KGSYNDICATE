@@ -154,6 +154,31 @@ a:hover{color:var(--gold-hi);}
             </div>
           </div>
 
+
+          <div style="position:relative;max-width:520px;width:100%;justify-self:center;border:1px solid rgba(217,178,74,.28);border-radius:6px;background:linear-gradient(158deg,rgba(28,23,16,.92) 0%,rgba(15,13,11,.94) 46%,rgba(6,6,8,.96) 100%);box-shadow:inset 0 1px 0 rgba(255,228,160,.1),inset 0 -26px 52px rgba(0,0,0,.8),0 2px 0 rgba(0,0,0,.9),0 24px 54px -20px rgba(0,0,0,.98);overflow:hidden;animation:kgWave 5.6s ease-in-out .25s infinite;">
+            <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,231,180,.45),transparent);"></div>
+            <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(217,178,74,.18);background:linear-gradient(90deg,rgba(217,178,74,.14) 0%,rgba(217,178,74,.03) 50%,rgba(217,178,74,0) 100%);box-shadow:0 8px 20px -12px rgba(0,0,0,.95);">
+              <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.26em;color:var(--gold-hi);text-shadow:0 1px 0 rgba(0,0,0,.8);">DIVINE COMMANDER</div>
+              <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;">01 OFFICER</div>
+            </div>
+            <div style="padding:13px;display:flex;flex-direction:column;gap:10px;">
+              <a href="https://www.roblox.com/users/93042625/profile" target="_blank" rel="noopener" style="position:relative;display:flex;align-items:center;gap:11px;padding:9px 11px;border:1px solid rgba(217,178,74,.18);border-radius:4px;background:linear-gradient(180deg,rgba(255,225,160,.06),rgba(0,0,0,.4));box-shadow:inset 0 1px 0 rgba(255,228,160,.07),0 8px 18px -12px rgba(0,0,0,.9);transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;animation:kgWaveSm 4.4s ease-in-out .4s infinite;" style-hover="border-color:var(--gold);transform:translateY(-3px) scale(1.015);box-shadow:inset 0 1px 0 rgba(255,238,190,.16),0 0 0 1px rgba(217,178,74,.32),0 14px 26px -12px rgba(217,178,74,.45);">
+                <div style="position:relative;width:44px;height:44px;flex:0 0 auto;border:1px solid rgba(217,178,74,.42);border-radius:4px;background:radial-gradient(72% 68% at 50% 26%,#e8cf92 0%,#a9822f 46%,#4d3a12 80%,#1a1408 100%);overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,.5),0 6px 14px -6px rgba(0,0,0,.9);">
+                  <img src="assets/head-commander.png" alt="" style="position:absolute;left:6%;top:5%;width:88%;height:88%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 3px 6px rgba(0,0,0,.6));" />
+                  <div style="position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.04) 34%,rgba(255,255,255,0) 52%);"></div>
+                  <div style="position:absolute;inset:0;border-radius:4px;box-shadow:inset 0 1px 0 rgba(255,238,200,.3),inset 0 -8px 16px rgba(0,0,0,.5);"></div>
+                </div>
+                <div style="flex:1 1 auto;">
+                  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--txt);text-shadow:0 1px 0 rgba(0,0,0,.7);">DIVINE COMMANDER</div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.2em;color:var(--gold);margin-top:2px;">WAR COMMAND</div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-size:8px;letter-spacing:.2em;color:#665f55;margin-top:2px;">KG HIGH COMMAND</div>
+                </div>
+                <div style="font-size:11px;color:var(--gold-dim);">↗</div>
+              </a>
+              <p style="margin:0;font-size:12.5px;line-height:1.55;color:#8d8578;text-wrap:pretty;">Oversees all the people during wars and the other war ranks to make sure they're commanding the</p>
+            </div>
+          </div>
+
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;">
 
             <div style="position:relative;border:1px solid rgba(217,178,74,.24);border-radius:6px;background:linear-gradient(158deg,rgba(28,23,16,.92) 0%,rgba(15,13,11,.94) 46%,rgba(6,6,8,.96) 100%);box-shadow:inset 0 1px 0 rgba(255,228,160,.1),inset 0 -26px 52px rgba(0,0,0,.8),0 2px 0 rgba(0,0,0,.9),0 24px 54px -20px rgba(0,0,0,.98);overflow:hidden;animation:kgWave 5.6s ease-in-out .5s infinite;">
@@ -418,7 +443,7 @@ a:hover{color:var(--gold-hi);}
     </section>
   </sc-if>
 
-  <sc-if value="{{ isStub }}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{ isStub }}" hint-placeholder-val="{{ false }}">
     <section style="min-height:100vh;padding-top:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#07070a;">
       <div style="font-family:'Chakra Petch',sans-serif;font-size:11.5px;letter-spacing:.4em;color:var(--gold);">{{ stubLabel }}</div>
       <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(28px,4vw,46px);letter-spacing:.16em;color:var(--txt-mute);">CLASSIFIED — PENDING RELEASE</div>
@@ -518,6 +543,7 @@ a:hover{color:var(--gold-hi);}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;goldAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#d9b24a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#d9b24a&quot;,&quot;#c9a227&quot;,&quot;#e8c766&quot;,&quot;#b8860b&quot;]},&quot;introEnabled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;declassify&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Ranks&quot;}}">
 const PAGES = ["HUB","COMMAND","RANKS","MEDALS","DATABASE","MAIN GROUP"];
+
 
 const C_LOW = "#8a7bf0", C_MID = "#c0392b", C_HIGH = "#d16be0", C_CMD = "#5865f2", C_TOP = "#ed4245";
 
