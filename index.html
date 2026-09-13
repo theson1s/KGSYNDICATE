@@ -49,6 +49,18 @@ a:hover{color:var(--gold-hi);}
 @keyframes kgPulse{0%,100%{opacity:.55;}50%{opacity:1;}}
 @keyframes kgOrbIn{0%{opacity:0;transform:scale(.68);}100%{opacity:1;transform:scale(1);}}
 @keyframes kgSpin{to{transform:rotate(360deg);}}
+@keyframes kgDossierIn{0%{opacity:0;transform:translateX(-52px) rotate(-2.4deg);}100%{opacity:1;transform:translateX(0) rotate(0deg);}}
+@keyframes kgRedactOff{0%{transform:translateX(0);opacity:1;}70%{opacity:1;}100%{transform:translateX(112%);opacity:0;}}
+@keyframes kgSealDrop{0%{opacity:0;transform:scale(3.2) rotate(-26deg);}62%{opacity:1;}100%{opacity:1;transform:scale(1) rotate(-8deg);}}
+@keyframes kgSealRing{0%{opacity:.9;transform:scale(1);}100%{opacity:0;transform:scale(2.5);}}
+@keyframes kgStampShake{0%,100%{transform:translate(0,0);}18%{transform:translate(3px,-4px);}40%{transform:translate(-4px,3px);}66%{transform:translate(2px,2px);}86%{transform:translate(-1px,-1px);}}
+@keyframes kgRoll{0%{transform:translateY(0);filter:blur(0);}6%{filter:blur(9px);}58%{filter:blur(7px);}86%{transform:translateY(-2514px);filter:blur(1.5px);}100%{transform:translateY(-2560px);filter:blur(0);}}
+@keyframes kgSlam{0%{transform:translateY(-9px) scale(1.014);}42%{transform:translateY(4px) scale(.997);}100%{transform:translateY(0) scale(1);}}
+@keyframes kgBandLock{0%{opacity:0;}22%{opacity:1;}100%{opacity:.42;}}
+@keyframes kgForgeRise{0%{opacity:.28;}100%{opacity:1;}}
+@keyframes kgForgeIn{0%{transform:scale(.9);}100%{transform:scale(1);}}
+@keyframes kgEmber{0%{transform:translate(0,10px) scale(.5);opacity:0;}14%{opacity:.9;}52%{transform:translate(4px,-52px) scale(1);opacity:.75;}100%{transform:translate(-3px,-118px) scale(.55);opacity:0;}}
+@keyframes kgEmberFlare{0%{opacity:0;}38%{opacity:1;}100%{opacity:0;}}
 @keyframes kgRedFlash{0%{opacity:0;}7%{opacity:.95;}20%{opacity:.14;}33%{opacity:.7;}55%{opacity:.1;}100%{opacity:0;}}
 @keyframes kgShake{0%,100%{transform:translate(0,0);}12%{transform:translate(-7px,4px);}28%{transform:translate(6px,-5px);}44%{transform:translate(-5px,-4px);}62%{transform:translate(5px,5px);}80%{transform:translate(-3px,2px);}}
 @keyframes kgGoldTitle{0%{opacity:0;transform:scale(.92);letter-spacing:.52em;}100%{opacity:1;transform:scale(1);letter-spacing:.16em;}}
@@ -131,7 +143,7 @@ a:hover{color:var(--gold-hi);}
               <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
                 <div style="position:absolute;top:0;bottom:0;width:26%;background:linear-gradient(90deg,rgba(255,240,200,0),rgba(255,240,200,.26),rgba(255,240,200,0));animation:kgSheen 1.5s ease-out forwards;"></div>
                 <div style="position:absolute;inset:-1px;box-shadow:inset 0 0 60px rgba(255,215,130,.32);"></div>
-                <div style="position:absolute;left:14%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.4s ease-out 0s infinite;"></div><div style="position:absolute;left:30%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.1s ease-out 0.35s infinite;"></div><div style="position:absolute;left:46%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.7s ease-out 0.15s infinite;"></div><div style="position:absolute;left:62%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.2s ease-out 0.5s infinite;"></div><div style="position:absolute;left:80%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.5s ease-out 0.25s infinite;"></div>
+                <div style="position:absolute;left:14%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.4s ease-out 0s infinite;"></div><div style="position:absolute;left:30%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.1s ease-out 0.35s infinite;"></div><div style="position:absolute;left:46%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.7s ease-out 0.15s infinite;"></div><div style="position:absolute;left:62%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgEmber 2.2s linear -0.9s infinite;"></div><div style="position:absolute;left:80%;bottom:14%;width:3px;height:3px;border-radius:50%;background:#ffeec2;box-shadow:0 0 8px 2px rgba(255,225,150,.75);animation:kgMote 2.5s ease-out 0.25s infinite;"></div>
               </div>
             </sc-if>
             <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(217,178,74,.18);background:linear-gradient(90deg,rgba(217,178,74,.14) 0%,rgba(217,178,74,.03) 50%,rgba(217,178,74,0) 100%);box-shadow:0 8px 20px -12px rgba(0,0,0,.95);justify-content:center;border-color:rgba(217,178,74,.3);">
@@ -460,6 +472,62 @@ a:hover{color:var(--gold-hi);}
     </section>
   </sc-if>
 
+<sc-if value="{{ isRoster }}" hint-placeholder-val="{{ false }}">
+    <section data-screen-label="Roster" style="position:relative;min-height:100vh;padding:88px 20px 64px;background:#07070a;">
+      <div style="position:absolute;inset:0;background:radial-gradient(110% 56% at 50% -6%,rgba(217,178,74,.07),transparent 62%);pointer-events:none;"></div>
+
+      <div style="position:relative;max-width:1100px;margin:0 auto;">
+        <div style="text-align:center;">
+          <div style="font-family:'Chakra Petch',sans-serif;font-size:10px;font-weight:600;letter-spacing:.42em;color:var(--gold);">◤ VERIFIED ROSTER ◢</div>
+          <h2 style="margin:12px 0 0;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(26px,3.8vw,46px);letter-spacing:.1em;color:var(--gold);text-shadow:0 2px 0 rgba(0,0,0,.9),0 0 16px rgba(217,178,74,.4);">{{ rosterGuild }}</h2>
+          <div style="width:170px;height:1px;margin:16px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 12px rgba(217,178,74,.5);"></div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 26px;margin-top:22px;padding:10px 16px;border-top:1px solid rgba(217,178,74,.16);border-bottom:1px solid rgba(217,178,74,.16);font-family:'Chakra Petch',sans-serif;font-size:9.5px;letter-spacing:.26em;color:#8d8578;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="width:5px;height:5px;background:{{ rosterDot }};box-shadow:0 0 8px {{ rosterDot }};"></div>
+            <span style="color:{{ rosterDot }};">{{ rosterStatus }}</span>
+          </div>
+          <div>RANKED MEMBERS <span style="color:var(--gold-hi);font-weight:700;">{{ rosterTotal }}</span></div>
+          <div>UPDATED <span style="color:var(--txt);">{{ rosterUpdated }}</span></div>
+        </div>
+
+        <sc-if value="{{ rosterHasData }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:18px;margin-top:26px;">
+            <sc-for list="{{ rosterGroups }}" as="g" hint-placeholder-count="4">
+              <div style="position:relative;border:1px solid var(--line);border-radius:6px;background:linear-gradient(158deg,rgba(24,20,15,.92) 0%,rgba(13,12,11,.95) 48%,rgba(6,6,8,.97) 100%);box-shadow:inset 0 1px 0 rgba(255,228,160,.08),0 18px 44px -24px rgba(0,0,0,.95);overflow:hidden;">
+                <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,231,180,.4),transparent);"></div>
+
+                <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 15px;border-bottom:1px solid rgba(217,178,74,.16);background:linear-gradient(90deg,rgba(217,178,74,.13) 0%,rgba(217,178,74,.02) 54%,transparent 100%);">
+                  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12px;letter-spacing:.26em;color:var(--gold-hi);text-shadow:0 1px 0 rgba(0,0,0,.8);">{{ g.rank }}</div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;white-space:nowrap;">{{ g.countLabel }}</div>
+                </div>
+
+                <div style="position:relative;padding:13px;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:9px;">
+                  <sc-for list="{{ g.members }}" as="m" hint-placeholder-count="3">
+                    <div style="padding:9px 11px;border:1px solid rgba(217,178,74,.16);border-radius:4px;background:linear-gradient(180deg,rgba(255,225,160,.05),rgba(0,0,0,.35));box-shadow:inset 0 1px 0 rgba(255,228,160,.06);">
+                      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.1em;color:var(--txt);text-shadow:0 1px 0 rgba(0,0,0,.7);word-break:break-word;">{{ m.name }}</div>
+                      <sc-if value="{{ m.verified }}" hint-placeholder-val="{{ true }}">
+                        <a href="{{ m.profile }}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:4px;font-family:'Chakra Petch',sans-serif;font-size:9.5px;letter-spacing:.18em;color:var(--gold-dim);transition:color .16s ease;word-break:break-all;" style-hover="color:var(--gold-hi);">{{ m.userLabel }}</a>
+                      </sc-if>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ rosterEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:40px auto 0;max-width:420px;padding:22px 18px;text-align:center;border:1px solid rgba(217,178,74,.2);border-radius:6px;background:rgba(10,9,9,.85);">
+            <div style="font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:.3em;color:var(--gold-dim);">{{ rosterNoteKicker }}</div>
+            <div style="margin-top:10px;font-family:'Chakra Petch',sans-serif;font-size:13px;letter-spacing:.14em;color:var(--txt-mute);text-wrap:pretty;">{{ rosterNote }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+  </sc-if>
+
 <sc-if value="{{ isStub }}" hint-placeholder-val="{{ false }}">
     <section style="min-height:100vh;padding-top:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#07070a;">
       <div style="font-family:'Chakra Petch',sans-serif;font-size:11.5px;letter-spacing:.4em;color:var(--gold);">{{ stubLabel }}</div>
@@ -468,30 +536,30 @@ a:hover{color:var(--gold-hi);}
   </sc-if>
 
   <sc-if value="{{ intro }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed;inset:0;z-index:90;pointer-events:none;overflow:hidden;">
-      <button type="button" onClick="{{ skipIntro }}" style="position:absolute;top:20px;right:22px;z-index:3;pointer-events:auto;background:rgba(0,0,0,.25);border:1px solid rgba(217,178,74,.16);color:rgba(154,146,132,.5);padding:5px 12px;cursor:pointer;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.28em;transition:color .2s ease,border-color .2s ease;" style-hover="color:var(--gold);border-color:rgba(217,178,74,.5);">SKIP</button>
-      <div style="position:absolute;inset:0;background:#050506;animation:kgBurn 1.05s steps(13,end) 3.45s forwards;">
-        <div style="position:absolute;inset:0;display:grid;place-items:center;animation:kgZoomOut 1.7s cubic-bezier(.2,.7,.2,1) both;">
-          <div style="position:absolute;font-family:'Chakra Petch',sans-serif;font-weight:500;font-size:15px;letter-spacing:.62em;color:var(--txt-mute);animation:kgSmallIn 1.9s ease-out both;">KG SYNDICATE</div>
-          <div style="position:absolute;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(72px,12vw,180px);letter-spacing:.14em;color:var(--gold);text-shadow:0 0 30px rgba(217,178,74,.5),0 0 90px rgba(217,178,74,.25);animation:kgBigIn 1.4s ease-out 1.85s both;">KG</div>
+    <div style="position:fixed;inset:0;z-index:90;pointer-events:none;overflow:hidden;animation:kgFadeOut 0.463s ease-in 4.011s both;">
+      <button type="button" onClick="{{ skipIntro }}" style="position:absolute;top:20px;right:22px;z-index:3;pointer-events:auto;background:rgba(0,0,0,.25);border:1px solid rgba(217,178,74,.16);color:rgba(154,146,132,.5);padding:5px 12px;cursor:pointer;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.28em;transition:color 0.14s ease,border-color 0.14s ease;" style-hover="color:var(--gold);border-color:rgba(217,178,74,.5);">SKIP</button>
+      <div style="position:absolute;inset:0;background:#050506;animation:kgBurn 0.874s steps(22,end) 2.16s forwards;">
+        <div style="position:absolute;inset:0;display:grid;place-items:center;animation:kgZoomOut 1.671s cubic-bezier(.18,.72,.22,1) both;">
+          <div style="position:absolute;font-family:'Chakra Petch',sans-serif;font-weight:500;font-size:15px;letter-spacing:.62em;color:var(--txt-mute);animation:kgSmallIn 1.569s ease-out both;">KG SYNDICATE</div>
+          <div style="position:absolute;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(72px,12vw,180px);letter-spacing:.14em;color:var(--gold);text-shadow:0 0 30px rgba(217,178,74,.5),0 0 90px rgba(217,178,74,.25);animation:kgBigIn 1.311s cubic-bezier(.2,.75,.25,1) 1.183s both;">KG</div>
         </div>
       </div>
       <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
-        <div style="position:absolute;left:0;right:0;top:0;height:22vh;animation:kgBeamDown 1.15s cubic-bezier(.4,0,.6,1) 2.35s both;">
+        <div style="position:absolute;left:0;right:0;top:0;height:22vh;animation:kgBeamDown 1.003s cubic-bezier(.36,.02,.6,1) 1.414s both;">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(217,178,74,0) 0%,rgba(217,178,74,.1) 42%,rgba(255,238,194,.5) 88%,#fff9e8 96%,rgba(255,238,194,.35) 100%);"></div>
           <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(0,0,0,.35) 0px,rgba(0,0,0,.35) 1px,transparent 1px,transparent 4px);"></div>
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,247,222,.9) 6%,#fff 50%,rgba(255,247,222,.9) 94%,transparent);box-shadow:0 0 34px 10px rgba(217,178,74,.55);"></div>
           <div style="position:absolute;left:0;right:0;bottom:-16vh;height:16vh;background:linear-gradient(180deg,rgba(217,178,74,.22),rgba(217,178,74,0));"></div>
         </div>
-        <div style="position:absolute;left:0;right:0;top:0;height:22vh;animation:kgBeamUp 1.05s cubic-bezier(.4,0,.6,1) 3.45s both;">
+        <div style="position:absolute;left:0;right:0;top:0;height:22vh;animation:kgBeamUp 0.926s cubic-bezier(.36,.02,.6,1) 2.16s both;">
           <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(217,178,74,0) 0%,rgba(217,178,74,.1) 42%,rgba(255,238,194,.5) 88%,#fff9e8 96%,rgba(255,238,194,.35) 100%);"></div>
           <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(0,0,0,.35) 0px,rgba(0,0,0,.35) 1px,transparent 1px,transparent 4px);"></div>
           <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,247,222,.9) 6%,#fff 50%,rgba(255,247,222,.9) 94%,transparent);box-shadow:0 0 34px 10px rgba(217,178,74,.55);"></div>
           <div style="position:absolute;left:0;right:0;bottom:-16vh;height:16vh;background:linear-gradient(180deg,rgba(217,178,74,.22),rgba(217,178,74,0));"></div>
         </div>
-        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(217,178,74,.075) 0px,rgba(217,178,74,.075) 1px,transparent 1px,transparent 5px);animation:kgLines 2.6s ease-out 2.4s both;"></div>
-        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(217,178,74,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(217,178,74,.12) 1px,transparent 1px);background-size:46px 46px;animation:kgGridFlash 2.4s ease-out 3.5s both;"></div>
-        <div style="position:absolute;left:50%;top:50%;width:min(62vw,760px);height:min(42vh,420px);transform:translate(-50%,-50%);animation:kgReticle 2.3s cubic-bezier(.2,.8,.2,1) 4.05s both;">
+        <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(217,178,74,.075) 0px,rgba(217,178,74,.075) 1px,transparent 1px,transparent 5px);animation:kgLines 1.929s ease-out 1.491s both;"></div>
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(217,178,74,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(217,178,74,.12) 1px,transparent 1px);background-size:46px 46px;animation:kgGridFlash 1.723s ease-out 2.134s both;"></div>
+        <div style="position:absolute;left:50%;top:50%;width:min(62vw,760px);height:min(42vh,420px);transform:translate(-50%,-50%);animation:kgReticle 1.826s cubic-bezier(.18,.78,.24,1) 2.494s both;">
           <div style="position:absolute;top:0;left:0;width:38px;height:38px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);box-shadow:-2px -2px 18px rgba(217,178,74,.5);"></div>
           <div style="position:absolute;top:0;right:0;width:38px;height:38px;border-top:2px solid var(--gold);border-right:2px solid var(--gold);box-shadow:2px -2px 18px rgba(217,178,74,.5);"></div>
           <div style="position:absolute;bottom:0;left:0;width:38px;height:38px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold);box-shadow:-2px 2px 18px rgba(217,178,74,.5);"></div>
@@ -500,66 +568,146 @@ a:hover{color:var(--gold-hi);}
           <div style="position:absolute;left:0;bottom:-24px;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.3em;color:#8c7c50;">KG-01 // IDENTITY VERIFIED</div>
           <div style="position:absolute;right:0;bottom:-24px;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.3em;color:#8c7c50;">100%</div>
         </div>
-        <div style="position:absolute;top:9vh;left:6vw;right:6vw;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 16px rgba(217,178,74,.6);animation:kgHud 2.1s cubic-bezier(.2,.8,.2,1) 4.1s both;"></div>
-        <div style="position:absolute;bottom:9vh;left:6vw;right:6vw;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 16px rgba(217,178,74,.6);animation:kgHud 2.1s cubic-bezier(.2,.8,.2,1) 4.2s both;"></div>
-        <div style="position:absolute;top:9vh;left:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.9s ease-out 4.35s both;"></div><div style="position:absolute;top:9vh;right:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.9s ease-out 4.4s both;"></div><div style="position:absolute;bottom:9vh;left:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.9s ease-out 4.45s both;"></div><div style="position:absolute;bottom:9vh;right:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.9s ease-out 4.5s both;"></div>
-        <div style="position:absolute;left:17%;top:31%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.6s ease-out 2.9s both;"></div><div style="position:absolute;left:76%;top:26%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.6s ease-out 3.15s both;"></div><div style="position:absolute;left:28%;top:71%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.6s ease-out 3.55s both;"></div><div style="position:absolute;left:67%;top:77%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.6s ease-out 3.8s both;"></div><div style="position:absolute;left:45%;top:19%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.6s ease-out 4.1s both;"></div>
-        <div style="position:absolute;inset:0;box-shadow:inset 0 0 180px 40px rgba(217,178,74,.09),inset 0 0 60px 10px rgba(0,0,0,.55);animation:kgAfter 2.4s ease-out 4.1s both;"></div>
+        <div style="position:absolute;top:9vh;left:6vw;right:6vw;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 16px rgba(217,178,74,.6);animation:kgHud 1.671s cubic-bezier(.18,.78,.24,1) 2.546s both;"></div>
+        <div style="position:absolute;bottom:9vh;left:6vw;right:6vw;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 16px rgba(217,178,74,.6);animation:kgHud 1.671s cubic-bezier(.18,.78,.24,1) 2.61s both;"></div>
+        <div style="position:absolute;top:9vh;left:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.414s ease-out 2.7s both;"></div><div style="position:absolute;top:9vh;right:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.414s ease-out 2.764s both;"></div><div style="position:absolute;bottom:9vh;left:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.414s ease-out 2.829s both;"></div><div style="position:absolute;bottom:9vh;right:6vw;width:8px;height:8px;background:var(--gold);box-shadow:0 0 14px rgba(217,178,74,.9);animation:kgTick 1.414s ease-out 2.893s both;"></div>
+        <div style="position:absolute;left:17%;top:31%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.221s ease-out 1.826s both;"></div><div style="position:absolute;left:76%;top:26%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.221s ease-out 2.031s both;"></div><div style="position:absolute;left:28%;top:71%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.221s ease-out 2.263s both;"></div><div style="position:absolute;left:67%;top:77%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.221s ease-out 2.494s both;"></div><div style="position:absolute;left:45%;top:19%;width:5px;height:5px;border:1px solid rgba(217,178,74,.9);box-shadow:0 0 12px rgba(217,178,74,.7);animation:kgBlip 1.221s ease-out 2.726s both;"></div>
+        <div style="position:absolute;inset:0;box-shadow:inset 0 0 180px 40px rgba(217,178,74,.09),inset 0 0 60px 10px rgba(0,0,0,.55);animation:kgAfter 1.8s ease-out 2.597s both;"></div>
       </div>
     </div>
   </sc-if>
 
   <sc-if value="{{ ranksIntro }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed;inset:0;z-index:95;pointer-events:none;overflow:hidden;background:#050506;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:kgFadeOut .85s ease-in 4.45s both;">
-      <button type="button" onClick="{{ skipRanks }}" style="position:absolute;top:20px;right:22px;z-index:3;pointer-events:auto;background:rgba(0,0,0,.25);border:1px solid rgba(217,178,74,.16);color:rgba(154,146,132,.5);padding:5px 12px;cursor:pointer;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.28em;transition:color .2s ease,border-color .2s ease;" style-hover="color:var(--gold);border-color:rgba(217,178,74,.5);">SKIP</button>
+    <div style="position:fixed;inset:0;z-index:95;pointer-events:none;overflow:hidden;background:#050506;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:kgFadeOut 0.376s ease-in 1.624s both;">
+      <button type="button" onClick="{{ skipRanks }}" style="position:absolute;top:20px;right:22px;z-index:3;pointer-events:auto;background:rgba(0,0,0,.25);border:1px solid rgba(217,178,74,.16);color:rgba(154,146,132,.5);padding:5px 12px;cursor:pointer;font-family:'Chakra Petch',sans-serif;font-size:9px;letter-spacing:.28em;transition:color 0.106s ease,border-color 0.106s ease;" style-hover="color:var(--gold);border-color:rgba(217,178,74,.5);">SKIP</button>
       <div style="position:absolute;inset:0;background:radial-gradient(58% 48% at 50% 46%,rgba(217,178,74,.09),transparent 72%);"></div>
       <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(217,178,74,.05) 0px,rgba(217,178,74,.05) 1px,transparent 1px,transparent 5px);"></div>
 
-      <div style="position:relative;width:min(50vh,440px);height:min(50vh,440px);animation:kgOrbIn 1.25s cubic-bezier(.2,.8,.2,1) both;">
-        <div style="position:absolute;inset:0;animation:kgShake .6s ease-in-out 1.42s both;">
-          <div style="position:absolute;inset:0;animation:kgSpin 26s linear infinite;">
-            <div style="position:absolute;inset:2%;border:1px solid rgba(217,178,74,.3);border-radius:50%;transform:rotate(-22deg) scaleY(.32);"></div>
-          </div>
-          <div style="position:absolute;inset:0;animation:kgSpin 17s linear infinite reverse;">
-            <div style="position:absolute;inset:8%;border:1px solid rgba(217,178,74,.24);border-radius:50%;transform:rotate(38deg) scaleY(.4);"></div>
-          </div>
-          <div style="position:absolute;inset:0;animation:kgSpin 33s linear infinite;">
-            <div style="position:absolute;inset:-4%;border:1px solid rgba(217,178,74,.16);border-radius:50%;transform:rotate(78deg) scaleY(.24);"></div>
-          </div>
-          <div style="position:absolute;inset:6%;border-radius:50%;border:1px solid rgba(217,178,74,.1);box-shadow:inset 0 0 70px rgba(217,178,74,.07);"></div>
-          <div style="position:absolute;inset:0;animation:kgSpin 8s linear infinite;">
-            <div style="position:absolute;left:50%;top:1%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 16px 4px rgba(217,178,74,.85);"></div>
-          </div>
-          <div style="position:absolute;inset:0;animation:kgSpin 12s linear infinite reverse;">
-            <div style="position:absolute;left:50%;bottom:3%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px 3px rgba(217,178,74,.7);"></div>
-          </div>
+      <div style="position:relative;width:min(640px,90vw);animation:kgDossierIn 0.541s cubic-bezier(.16,.84,.28,1) both;">
+        <div style="position:relative;animation:kgStampShake 0.353s cubic-bezier(.25,.7,.3,1) 1.118s both;">
+          <div style="position:absolute;left:26px;top:-17px;width:150px;height:18px;border:1px solid rgba(217,178,74,.3);border-bottom:none;border-radius:3px 3px 0 0;background:linear-gradient(180deg,rgba(217,178,74,.14),rgba(10,9,8,.9));"></div>
+          <div style="position:absolute;left:38px;top:-14px;font-family:'Chakra Petch',sans-serif;font-size:7.5px;letter-spacing:.28em;color:var(--gold-dim);">FILE 001</div>
 
-          <div style="position:absolute;inset:19%;">
-            <sc-for list="{{ introShards }}" as="s" hint-placeholder-count="21">
-              <div style="position:absolute;inset:0;background-image:url('assets/logo-silver.png');background-size:contain;background-position:center;background-repeat:no-repeat;clip-path:{{ s.clip }};transform:{{ s.tf }};opacity:{{ s.op }};filter:{{ s.fx }};transition:transform 1.5s cubic-bezier(.16,.9,.24,1),opacity 1.5s ease,filter .5s ease;"></div>
-            </sc-for>
+          <div style="position:relative;border:1px solid rgba(217,178,74,.32);border-radius:4px;background:linear-gradient(158deg,rgba(26,22,16,.97),rgba(10,9,9,.98) 52%,rgba(5,5,6,.99));box-shadow:inset 0 1px 0 rgba(255,228,160,.1),0 30px 70px -22px rgba(0,0,0,.98);overflow:hidden;">
+            <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(180deg,rgba(217,178,74,.03) 0px,rgba(217,178,74,.03) 1px,transparent 1px,transparent 6px);pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(217,178,74,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(217,178,74,.028) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;"></div>
+            <div style="position:absolute;right:0;top:31px;width:96px;height:96px;background:repeating-linear-gradient(135deg,rgba(217,178,74,.1) 0px,rgba(217,178,74,.1) 7px,transparent 7px,transparent 16px);clip-path:polygon(100% 0,100% 100%,0 0);pointer-events:none;"></div>
+
+            <div style="position:absolute;left:0;top:0;bottom:0;width:30px;border-right:1px solid rgba(217,178,74,.14);background:linear-gradient(90deg,rgba(217,178,74,.07),transparent);pointer-events:none;"></div>
+            <div style="position:absolute;left:11px;top:22%;width:9px;height:9px;border-radius:50%;background:#050506;box-shadow:inset 0 1px 2px rgba(0,0,0,.9),0 0 0 1px rgba(217,178,74,.22);"></div>
+            <div style="position:absolute;left:11px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:#050506;box-shadow:inset 0 1px 2px rgba(0,0,0,.9),0 0 0 1px rgba(217,178,74,.22);"></div>
+            <div style="position:absolute;left:11px;bottom:22%;width:9px;height:9px;border-radius:50%;background:#050506;box-shadow:inset 0 1px 2px rgba(0,0,0,.9),0 0 0 1px rgba(217,178,74,.22);"></div>
+
+            <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 15px 9px 42px;border-bottom:1px solid rgba(217,178,74,.2);background:linear-gradient(90deg,rgba(217,178,74,.13),transparent);">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:5px;height:5px;background:#e05252;box-shadow:0 0 8px rgba(224,82,82,.8);animation:kgPulse 1.4s ease-in-out infinite;"></div>
+                <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.3em;color:#e05252;">CLASSIFIED // LEVEL OMEGA</div>
+              </div>
+              <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.26em;color:#8d8578;">KG SYNDICATE ARCHIVE</div>
+            </div>
+
+            <div style="position:relative;padding:34px 42px 22px 42px;text-align:center;">
+              <div style="position:absolute;left:42px;top:20px;width:20px;height:20px;border-top:1px solid rgba(217,178,74,.45);border-left:1px solid rgba(217,178,74,.45);"></div>
+              <div style="position:absolute;right:42px;top:20px;width:20px;height:20px;border-top:1px solid rgba(217,178,74,.45);border-right:1px solid rgba(217,178,74,.45);"></div>
+
+              <div style="position:relative;display:inline-block;">
+                <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,64px);line-height:1;letter-spacing:.16em;text-indent:.16em;color:var(--gold);text-shadow:0 0 20px rgba(217,178,74,.42),0 0 74px rgba(217,178,74,.22);">KG RANKS</div>
+                <div style="position:absolute;left:-8px;top:-6px;right:-8px;bottom:-4px;background:#12100c;border:1px solid rgba(217,178,74,.14);animation:kgRedactOff 0.5s cubic-bezier(.5,.02,.44,1) 0.35s both;"></div>
+              </div>
+
+              <div style="width:210px;height:1px;margin:18px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:kgFailIn 0.36s ease-out 0.84s both;"></div>
+
+              <div style="position:relative;display:inline-block;margin-top:16px;">
+                <div style="font-family:'Chakra Petch',sans-serif;font-size:11.5px;line-height:1.7;letter-spacing:.14em;text-indent:.14em;color:#8d8578;">You have been approved</div>
+                <div style="position:absolute;left:-6px;top:-3px;right:-6px;bottom:-3px;background:#12100c;border:1px solid rgba(217,178,74,.14);animation:kgRedactOff 0.44s cubic-bezier(.5,.02,.44,1) 0.58s both;"></div>
+              </div>
+            </div>
+
+            <div style="position:relative;display:flex;align-items:flex-end;justify-content:flex-start;gap:14px;padding:12px 180px 14px 42px;border-top:1px solid rgba(217,178,74,.16);background:linear-gradient(180deg,transparent,rgba(217,178,74,.05));animation:kgFailIn 0.4s ease-out 0.62s both;">
+              <div style="display:flex;align-items:flex-end;gap:20px;text-align:left;">
+                <div style="display:flex;align-items:flex-end;gap:1.5px;height:20px;opacity:.5;">
+                  <div style="width:1.5px;height:100%;background:var(--gold-dim);"></div><div style="width:3px;height:70%;background:var(--gold-dim);"></div><div style="width:1.5px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:55%;background:var(--gold-dim);"></div><div style="width:3.5px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:80%;background:var(--gold-dim);"></div><div style="width:2px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:60%;background:var(--gold-dim);"></div><div style="width:3px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:90%;background:var(--gold-dim);"></div>
+                </div>
+                <div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#8d8578;">REF</div>
+                  <div style="margin-top:3px;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.2em;color:var(--gold-dim);">KG-R-001</div>
+                </div>
+                <div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#8d8578;">GRADES</div>
+                  <div style="margin-top:3px;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.2em;color:var(--gold-dim);">21</div>
+                </div>
+                <div>
+                  <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#8d8578;">STATUS</div>
+                  <div style="margin-top:3px;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.2em;color:var(--gold-hi);">CLEARED</div>
+                </div>
+              </div>
+              <div style="display:none;">
+                <div style="width:1.5px;height:100%;background:var(--gold-dim);"></div><div style="width:3px;height:70%;background:var(--gold-dim);"></div><div style="width:1.5px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:55%;background:var(--gold-dim);"></div><div style="width:3.5px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:80%;background:var(--gold-dim);"></div><div style="width:2px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:60%;background:var(--gold-dim);"></div><div style="width:3px;height:100%;background:var(--gold-dim);"></div><div style="width:1.5px;height:90%;background:var(--gold-dim);"></div><div style="width:1.5px;height:100%;background:var(--gold-dim);"></div><div style="width:2.5px;height:65%;background:var(--gold-dim);"></div>
+              </div>
+            </div>
+
+            <div style="position:absolute;right:26px;bottom:18px;width:132px;height:132px;animation:kgSealDrop 0.4s cubic-bezier(.24,1.42,.42,1) 1.035s both;">
+              <div style="position:absolute;inset:0;background-image:url('assets/stamp-logo.png');background-size:contain;background-position:center;background-repeat:no-repeat;filter:sepia(1) saturate(2.4) hue-rotate(-16deg) brightness(1.05) drop-shadow(0 0 12px rgba(217,178,74,.45));opacity:.92;"></div>
+              <div style="position:absolute;left:-14px;right:-14px;top:52%;transform:translateY(-50%) rotate(-11deg);text-align:center;">
+                <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:23px;letter-spacing:.1em;color:#c8201c;filter:blur(3px);opacity:.75;">APPROVED</div>
+                <div style="position:absolute;left:0;right:0;top:0;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:23px;letter-spacing:.1em;color:#e0332c;text-shadow:1px 1px 0 rgba(120,10,8,.85),-1px 0 2px rgba(230,60,50,.5);opacity:.94;">APPROVED</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div style="position:absolute;inset:0;background:radial-gradient(64% 54% at 50% 46%,rgba(255,44,44,.9),rgba(148,8,8,.28) 56%,transparent 78%);mix-blend-mode:screen;animation:kgRedFlash 1.6s ease-out 1.36s both;"></div>
-      <div style="position:absolute;inset:0;box-shadow:inset 0 0 240px 60px rgba(190,20,20,.5);animation:kgRedFlash 2s ease-out 1.4s both;"></div>
-
-      <div style="position:relative;margin-top:20px;font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:.4em;color:#e05252;animation:kgFailIn .5s ease-out 2.05s both;">SIGIL INTEGRITY // COMPROMISED</div>
-
-      <div style="position:relative;margin-top:26px;text-align:center;">
-        <div style="animation:kgGoldTitle 1.15s cubic-bezier(.2,.8,.2,1) 2.45s both;">
-          <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(34px,5.6vw,76px);line-height:1;color:var(--gold);text-shadow:0 0 20px rgba(217,178,74,.55),0 0 80px rgba(217,178,74,.3);">KG RANKS</div>
-        </div>
-        <div style="width:180px;height:1px;margin:16px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:kgFailIn .7s ease-out 3.1s both;"></div>
-      </div>
+      <div style="position:relative;margin-top:34px;font-family:'Chakra Petch',sans-serif;font-size:9.5px;letter-spacing:.4em;color:var(--gold-dim);animation:kgFailIn 0.424s ease-out 1.271s both;">FILE UNSEALED // 21 RANKS</div>
     </div>
   </sc-if>
 
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;goldAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#d9b24a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#d9b24a&quot;,&quot;#c9a227&quot;,&quot;#e8c766&quot;,&quot;#b8860b&quot;]},&quot;introEnabled&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;declassify&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Ranks&quot;}}">
-const PAGES = ["HUB","COMMAND","RANKS","MEDALS","DATABASE","MAIN GROUP"];
+const PAGES = ["HUB","COMMAND","RANKS","MEDALS","ROSTER","DATABASE","MAIN GROUP"];
+
+const ROSTER_URL = "https://verify.kgprevails.com/api/public/roster";
+const ROSTER_CACHE = "kg-roster-cache";
+
+function rosterSafeUrl(u) {
+  return typeof u === "string" && /^https?:\/\//i.test(u) ? u : null;
+}
+
+function rosterWhen(iso) {
+  try {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return "UNKNOWN";
+    return d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+  } catch (e) { return "UNKNOWN"; }
+}
+
+function rosterShape(raw) {
+  if (!raw || typeof raw !== "object" || !Array.isArray(raw.ranks)) return null;
+  const groups = raw.ranks.map(g => {
+    const members = Array.isArray(g && g.members) ? g.members : [];
+    const n = typeof (g && g.count) === "number" ? g.count : members.length;
+    return {
+      rank: String((g && g.rank) || "UNLISTED"),
+      countLabel: String(n).padStart(2, "0") + (n === 1 ? " MEMBER" : " MEMBERS"),
+      members: members.map(m => {
+        const profile = rosterSafeUrl(m && m.profile);
+        const user = m && m.roblox ? String(m.roblox) : "";
+        return {
+          name: String((m && m.name) || "UNKNOWN"),
+          verified: !!(profile && user),
+          profile: profile || "",
+          userLabel: user ? "@" + user + " \u2197" : ""
+        };
+      })
+    };
+  });
+  return {
+    guild: String(raw.guild || "ROSTER"),
+    total: typeof raw.total_ranked === "number" ? String(raw.total_ranked) : "\u2014",
+    updated: rosterWhen(raw.updated_at),
+    groups
+  };
+}
 
 
 const C_LOW = "#8a7bf0", C_MID = "#c0392b", C_HIGH = "#d16be0", C_CMD = "#5865f2", C_TOP = "#ed4245";
@@ -618,9 +766,30 @@ const SHARDS = (() => {
 })();
 
 class Component extends DCLogic {
-  state = { page: "HUB", intro: false, rankIdx: 0, ranksIntro: false, introPhase: 0, flash: false };
+  state = { page: "HUB", intro: false, rankIdx: 0, ranksIntro: false, introPhase: 0, flash: false, roster: null, rosterFrom: "loading" };
+
+  loadRoster() {
+    if (this._rosterBusy) return;
+    this._rosterBusy = true;
+    fetch(ROSTER_URL, { cache: "no-store" })
+      .then(r => { if (!r.ok) throw new Error("bad status"); return r.json(); })
+      .then(j => {
+        const shaped = rosterShape(j);
+        if (!shaped) throw new Error("bad shape");
+        try { localStorage.setItem(ROSTER_CACHE, JSON.stringify(j)); } catch (e) {}
+        this._rosterBusy = false;
+        this.setState({ roster: shaped, rosterFrom: "live" });
+      })
+      .catch(() => {
+        this._rosterBusy = false;
+        let cached = null;
+        try { cached = rosterShape(JSON.parse(localStorage.getItem(ROSTER_CACHE))); } catch (e) {}
+        this.setState({ roster: cached, rosterFrom: cached ? "cache" : "down" });
+      });
+  }
 
   componentDidMount() {
+    this.loadRoster();
     if (this.props.goldAccent) document.documentElement.style.setProperty("--gold", this.props.goldAccent);
     const seen = (() => { try { return sessionStorage.getItem("kg-intro") === "1"; } catch (e) { return false; } })();
     if ((this.props.introEnabled ?? true) && !seen) this.playIntro();
@@ -650,10 +819,9 @@ class Component extends DCLogic {
     try { seen = sessionStorage.getItem("kg-ranks-intro") === "1"; } catch (e) {}
     if (seen && !force) return;
     try { sessionStorage.setItem("kg-ranks-intro", "1"); } catch (e) {}
-    clearTimeout(this.r1); clearTimeout(this.r2);
+    clearTimeout(this.r1); clearTimeout(this.r2); clearTimeout(this.r3);
     this.setState({ ranksIntro: true, introPhase: 0, rankIdx: 0, flash: false });
-    this.r1 = setTimeout(() => this.setState({ introPhase: 1 }), 1450);
-    this.r2 = setTimeout(() => this.setState({ ranksIntro: false }), 5300);
+    this.r2 = setTimeout(() => this.setState({ ranksIntro: false }), 2000);
   }
 
   step(d) {
@@ -674,7 +842,7 @@ class Component extends DCLogic {
     clearTimeout(this.t);
     this.setState({ intro: true, page: "HUB" });
     try { sessionStorage.setItem("kg-intro", "1"); } catch (e) {}
-    this.t = setTimeout(() => this.setState({ intro: false }), 6400);
+    this.t = setTimeout(() => this.setState({ intro: false }), 4500);
   }
 
   loadAvatars() {
@@ -696,7 +864,7 @@ class Component extends DCLogic {
     const idx = Math.max(0, Math.min(last, this.state.rankIdx || 0));
     const r = RANKS[idx];
     const declass = this.props.declassify === true && !!r.d;
-    const ip = this.state.introPhase ? 1 : 0;
+    const ip = this.state.introPhase | 0;
     return {
       prev: () => this.step(-1),
       next: () => this.step(1),
@@ -728,12 +896,6 @@ class Component extends DCLogic {
           fx: home ? "none" : "brightness(.5) saturate(.35)"
         };
       }),
-      introShards: SHARDS.map(s => ({
-        clip: s.clip,
-        tf: ip ? "translate(" + (s.dx * 2.6).toFixed(1) + "px," + (s.dy * 2.6).toFixed(1) + "px) rotate(" + (s.rot * 1.9).toFixed(1) + "deg)" : "translate(0px,0px) rotate(0deg)",
-        op: ip ? 0.28 : 1,
-        fx: ip ? "brightness(.5)" : "none"
-      })),
       ticks: RANKS.map((x, i) => ({
         bg: i < idx ? "var(--gold-dim)" : i === idx ? r.c : "rgba(255,255,255,.06)",
         glow: i === idx ? "0 0 12px " + r.c : "none"
@@ -748,11 +910,27 @@ class Component extends DCLogic {
       isRanks: page === "RANKS",
       rankTotal: String(RANKS.length).padStart(2, "0"),
       isMedals: page === "MEDALS",
-      isStub: page !== "HUB" && page !== "COMMAND" && page !== "RANKS" && page !== "MEDALS",
+      isRoster: page === "ROSTER",
+      rosterGuild: this.state.roster ? this.state.roster.guild : "KG SYNDICATE",
+      rosterTotal: this.state.roster ? this.state.roster.total : "\u2014",
+      rosterUpdated: this.state.roster ? this.state.roster.updated : "\u2014",
+      rosterGroups: this.state.roster ? this.state.roster.groups : [],
+      rosterHasData: !!(this.state.roster && this.state.roster.groups.length),
+      rosterEmpty: !(this.state.roster && this.state.roster.groups.length),
+      rosterStatus: this.state.rosterFrom === "live" ? "LIVE FEED"
+        : this.state.rosterFrom === "cache" ? "LAST SEEN \u2014 FEED OFFLINE"
+        : this.state.rosterFrom === "down" ? "FEED OFFLINE" : "QUERYING ARCHIVE",
+      rosterDot: this.state.rosterFrom === "live" ? "var(--gold)"
+        : this.state.rosterFrom === "down" ? "#e05252" : "#8d8578",
+      rosterNoteKicker: this.state.rosterFrom === "loading" ? "STAND BY" : "NO RECORD HELD",
+      rosterNote: this.state.rosterFrom === "loading"
+        ? "Contacting the archive."
+        : "Roster temporarily unavailable.",
+      isStub: page !== "HUB" && page !== "COMMAND" && page !== "RANKS" && page !== "MEDALS" && page !== "ROSTER",
       stubLabel: page,
       replay: () => this.playIntro(),
       skipIntro: () => { clearTimeout(this.t); this.setState({ intro: false }); },
-      skipRanks: () => { clearTimeout(this.r1); clearTimeout(this.r2); this.setState({ ranksIntro: false, introPhase: 0 }); },
+      skipRanks: () => { clearTimeout(this.r1); clearTimeout(this.r2); clearTimeout(this.r3); this.setState({ ranksIntro: false, introPhase: 0 }); },
       bless: !!this.state.bless,
       openGeneral: this.state.openGeneral !== false,
       openMajor: !!this.state.openMajor,
