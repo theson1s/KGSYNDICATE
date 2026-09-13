@@ -503,13 +503,28 @@ a:hover{color:var(--gold-hi);}
                   <div style="font-family:'Chakra Petch',sans-serif;font-size:8.5px;letter-spacing:.24em;color:#6b6459;white-space:nowrap;">{{ g.countLabel }}</div>
                 </div>
 
-                <div style="position:relative;padding:13px;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:9px;">
+                <div style="position:relative;padding:13px;display:grid;grid-template-columns:repeat(auto-fill,minmax(214px,1fr));gap:9px;">
                   <sc-for list="{{ g.members }}" as="m" hint-placeholder-count="3">
-                    <div style="padding:9px 11px;border:1px solid rgba(217,178,74,.16);border-radius:4px;background:linear-gradient(180deg,rgba(255,225,160,.05),rgba(0,0,0,.35));box-shadow:inset 0 1px 0 rgba(255,228,160,.06);">
-                      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.1em;color:var(--txt);text-shadow:0 1px 0 rgba(0,0,0,.7);word-break:break-word;">{{ m.name }}</div>
-                      <sc-if value="{{ m.verified }}" hint-placeholder-val="{{ true }}">
-                        <a href="{{ m.profile }}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:4px;font-family:'Chakra Petch',sans-serif;font-size:9.5px;letter-spacing:.18em;color:var(--gold-dim);transition:color .16s ease;word-break:break-all;" style-hover="color:var(--gold-hi);">{{ m.userLabel }}</a>
+                    <div style="display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid rgba(217,178,74,.16);border-radius:4px;background:linear-gradient(180deg,rgba(255,225,160,.05),rgba(0,0,0,.35));box-shadow:inset 0 1px 0 rgba(255,228,160,.06);">
+                      <div style="position:relative;width:40px;height:40px;flex:0 0 auto;border-radius:50%;overflow:hidden;background:radial-gradient(70% 70% at 50% 28%,rgba(217,178,74,.16),rgba(10,9,9,.9));box-shadow:inset 0 0 0 1px rgba(217,178,74,.3);">
+                        <sc-if value="{{ m.hasAvatar }}" hint-placeholder-val="{{ false }}">
+                          <img src="{{ m.avatar }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+                        </sc-if>
+                        <sc-if value="{{ m.noAvatar }}" hint-placeholder-val="{{ true }}">
+                          <div style="position:absolute;inset:0;display:grid;place-items:center;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:15px;letter-spacing:.04em;color:#8d8578;">{{ m.initial }}</div>
+                        </sc-if>
+                      </div>
+                      <div style="min-width:0;flex:1 1 auto;">
+                      <div style="display:flex;align-items:baseline;gap:6px;">
+                        <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.1em;color:var(--txt);text-shadow:0 1px 0 rgba(0,0,0,.7);word-break:break-word;">{{ m.name }}</div>
+                        <sc-if value="{{ m.verified }}" hint-placeholder-val="{{ false }}">
+                          <div title="Verified" style="flex:0 0 auto;font-size:10px;line-height:1;color:var(--gold);text-shadow:0 0 8px rgba(217,178,74,.55);">✓</div>
+                        </sc-if>
+                      </div>
+                      <sc-if value="{{ m.hasLink }}" hint-placeholder-val="{{ true }}">
+                        <a href="{{ m.profile }}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:4px;font-family:'Chakra Petch',sans-serif;font-size:9.5px;letter-spacing:.18em;color:var(--gold);transition:color .16s ease;word-break:break-all;" style-hover="color:var(--gold-hi);">{{ m.userLabel }}</a>
                       </sc-if>
+                      </div>
                     </div>
                   </sc-for>
                 </div>
@@ -694,9 +709,14 @@ function rosterShape(raw) {
         const user = m && m.roblox ? String(m.roblox) : "";
         return {
           name: String((m && m.name) || "UNKNOWN"),
-          verified: !!(profile && user),
+          hasLink: !!profile,
+          avatar: rosterSafeUrl(m && m.avatar) || "",
+          hasAvatar: !!rosterSafeUrl(m && m.avatar),
+          noAvatar: !rosterSafeUrl(m && m.avatar),
+          initial: (String((m && m.name) || "?").trim().charAt(0) || "?").toUpperCase(),
+          verified: !!(m && m.verified),
           profile: profile || "",
-          userLabel: user ? "@" + user + " \u2197" : ""
+          userLabel: (user ? "@" + user : "PROFILE") + " \u2197"
         };
       })
     };
