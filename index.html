@@ -507,11 +507,9 @@ a:hover{color:var(--gold-hi);}
                   <sc-for list="{{ g.members }}" as="m" hint-placeholder-count="3">
                     <div style="display:flex;align-items:center;gap:10px;padding:9px 11px;border:1px solid rgba(217,178,74,.16);border-radius:4px;background:linear-gradient(180deg,rgba(255,225,160,.05),rgba(0,0,0,.35));box-shadow:inset 0 1px 0 rgba(255,228,160,.06);">
                       <div style="position:relative;width:40px;height:40px;flex:0 0 auto;border-radius:50%;overflow:hidden;background:radial-gradient(70% 70% at 50% 28%,rgba(217,178,74,.16),rgba(10,9,9,.9));box-shadow:inset 0 0 0 1px rgba(217,178,74,.3);">
+                        <div style="position:absolute;inset:0;display:grid;place-items:center;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:15px;letter-spacing:.04em;color:#8d8578;">{{ m.initial }}</div>
                         <sc-if value="{{ m.hasAvatar }}" hint-placeholder-val="{{ false }}">
-                          <img src="{{ m.avatar }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
-                        </sc-if>
-                        <sc-if value="{{ m.noAvatar }}" hint-placeholder-val="{{ true }}">
-                          <div style="position:absolute;inset:0;display:grid;place-items:center;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:15px;letter-spacing:.04em;color:#8d8578;">{{ m.initial }}</div>
+                          <img src="{{ m.avatar }}" alt="" loading="lazy" onError="{{ avatarFailed }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:radial-gradient(70% 70% at 50% 28%,rgba(217,178,74,.16),rgba(10,9,9,.9));" />
                         </sc-if>
                       </div>
                       <div style="min-width:0;flex:1 1 auto;">
@@ -931,6 +929,7 @@ class Component extends DCLogic {
       rankTotal: String(RANKS.length).padStart(2, "0"),
       isMedals: page === "MEDALS",
       isRoster: page === "ROSTER",
+      avatarFailed: (e) => { const n = e && e.currentTarget; if (n) n.style.display = "none"; },
       rosterGuild: this.state.roster ? this.state.roster.guild : "KG SYNDICATE",
       rosterTotal: this.state.roster ? this.state.roster.total : "\u2014",
       rosterUpdated: this.state.roster ? this.state.roster.updated : "\u2014",
